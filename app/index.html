@@ -23,49 +23,78 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+<div class="box">
+  <div id="dear-listener" class="box__dearlistener">
+      <ul>
+        <h3>Dear Listener,</h3>
+      </ul>
+      <ul>
+        <li>Hordaland Kunstsenter</li>
+        <li>Norsk Kulturfond</li>
+        <li>Bergen Kommune</li>
+      </ul>
+  </div>    
+
+  <div id="mixtape" class="box__mixtape">
+    <div id="header" class="box__mixtape--header">
+        <p>16:45pm, June 1st • It is Sunny in Bergen</p>
+        <h1>An Archipelago</h1>
+    </div>
+
+    <div id="postcard" class="box__mixtape--postcard">
+      <div id="postcard-image">Image here</div>
+    </div>
     
-<div id="curatorial-text">
-    <ul>
-      <li>Curatorial text here</li>
-    </ul>
-</div>    
+    <div id="player" class="box__mixtape--player">
+      <div id="player-header">
+        <div id="player-title">
+          <h1>Mixtape</h1>
+        </div>
+        <div id="player-controls"></div>      
+      </div>
+      <div id="player-track">
+        <div id="track-start-time">2:22</div>
+        <div id="track-title">Title la la maybe Marquee</div>
+        <div id="track-end-time">25:30</div>
+      </div>
+      <div id="player-footer">A tool for Journeys</div>
+    </div>
+  </div>
 
-<div id="mixtape">
-    <ul>
-      <li>Artist 1</li>
-      <li>Artist 2</li>
-      <li>Artist 3</li>
-      <li>Artist 4</li>
-      <li>Artist 5</li>
-      <li>Artist 6</li>
-      <li>Artist 7</li>
-    </ul>
+  <div id="menu" class="box__menu">
+    <div id="menu-artists" class="box__menu--artists">
+      <h2>Artists</h2>
+    </div>
+    <div id="menu-exhibition" class="box__menu--exhibition">
+      <h2>Exhibition</h2>
+    </div>
+    <div id="menu-credits" class="box__menu--credits">
+      <h2>Credits</h2>
+    </div>
+    <div id="menu-shuffle" class="box__menu--shuffle">
+      <h2 class="webding">insert webding svg</h2>
+    </div>
+  </div>
 </div>
 
-<div id="logos">
-<ul>
-  <li>Hordaland Kunstsenter</li>
-  <li>Kulturrådet</li>
-  <li>Bergen Kommune</li>
-</ul>
-
-<div class="sc-player">
-    <a href="http://soundcloud.com/archipelagospace/tracks" class="sc-player">Matas Favorites</a>
-</div>
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+    <!-- Gauges Tracking code -->
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '576cacf7bb922a7e7200ad28');
+        t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+        t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
     </script>
 
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-
+<!--     <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script> -->
+    <script src="//connect.soundcloud.com/sdk.js"></script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -76,17 +105,5 @@
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
-    <!-- build:js scripts/sc-player.js -->
-    <!-- <script src="scripts/sc-player.js"></script> -->
-    <!-- endbuild -->
-
-    <!-- build:js scripts/soundcloud.player.api.js -->
-    <!-- <script src="scripts/soundcloud.player.api.js"></script> -->
-    <!-- endbuild -->
-
-
-    <!-- build:js scripts/waveform.js -->
-    <!-- <script src="scripts/waveform.js"></script> -->
-    <!-- endbuild -->
   </body>
 </html>

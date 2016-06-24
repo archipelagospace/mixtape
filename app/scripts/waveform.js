@@ -11,8 +11,8 @@
       this.container = options.container;
       this.canvas = options.canvas;
       this.data = options.data || [];
-      this.outerColor = options.outerColor || "transparent";
-      this.innerColor = options.innerColor || "#000000";
+      this.outerColor = options.outerColor || 'transparent';
+      this.innerColor = options.innerColor || '#000000';
       this.interpolate = true;
       if (options.interpolate === false) {
         this.interpolate = false;
@@ -21,11 +21,11 @@
         if (this.container) {
           this.canvas = this.createCanvas(this.container, options.width || this.container.clientWidth, options.height || this.container.clientHeight);
         } else {
-          throw "Either canvas or container option must be passed";
+          throw 'Either canvas or container option must be passed';
         }
       }
       this.patchCanvasForIE(this.canvas);
-      this.context = this.canvas.getContext("2d");
+      this.context = this.canvas.getContext('2d');
       this.width = parseInt(this.context.canvas.width, 10);
       this.height = parseInt(this.context.canvas.height, 10);
       if (options.data) {
@@ -60,7 +60,7 @@
     Waveform.prototype.redraw = function() {
       var d, i, middle, t, _i, _len, _ref, _results;
       this.clear();
-      if (typeof this.innerColor === "function") {
+      if (typeof this.innerColor === 'function') {
         this.context.fillStyle = this.innerColor();
       } else {
         this.context.fillStyle = this.innerColor;
@@ -72,7 +72,7 @@
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         d = _ref[_i];
         t = this.width / this.data.length;
-        if (typeof this.innerColor === "function") {
+        if (typeof this.innerColor === 'function') {
           this.context.fillStyle = this.innerColor(i / this.width, d);
         }
         this.context.clearRect(t * i, middle - middle * d, t, middle * d * 2);
@@ -90,7 +90,7 @@
 
     Waveform.prototype.patchCanvasForIE = function(canvas) {
       var oldGetContext;
-      if (typeof window.G_vmlCanvasManager !== "undefined") {
+      if (typeof window.G_vmlCanvasManager !== 'undefined') {
         canvas = window.G_vmlCanvasManager.initElement(canvas);
         oldGetContext = canvas.getContext;
         return canvas.getContext = function(a) {
@@ -104,7 +104,7 @@
 
     Waveform.prototype.createCanvas = function(container, width, height) {
       var canvas;
-      canvas = document.createElement("canvas");
+      canvas = document.createElement('canvas');
       container.appendChild(canvas);
       canvas.width = width;
       canvas.height = height;
@@ -164,11 +164,11 @@
             stream = this;
             that.innerColor = function(x, y) {
               if (x < stream.position / stream.durationEstimate) {
-                return options.playedColor || "rgba(255,  102, 0, 0.8)";
+                return options.playedColor || 'rgba(255,  102, 0, 0.8)';
               } else if (x < stream.bytesLoaded / stream.bytesTotal) {
-                return options.loadedColor || "rgba(0, 0, 0, 0.8)";
+                return options.loadedColor || 'rgba(0, 0, 0, 0.8)';
               } else {
-                return options.defaultColor || "rgba(0, 0, 0, 0.4)";
+                return options.defaultColor || 'rgba(0, 0, 0, 0.4)';
               }
             };
             innerColorWasSet = true;
@@ -180,7 +180,7 @@
 
     Waveform.prototype.dataFromSoundCloudTrack = function(track) {
       var _this = this;
-      return JSONP.get("http://www.waveformjs.org/w", {
+      return JSONP.get('http://www.waveformjs.org/w', {
         url: track.waveform_url
       }, function(data) {
         return _this.update({
@@ -197,12 +197,12 @@
     var config, counter, encode, head, jsonp, key, load, query, setDefaults, window;
     load = function(url) {
       var done, head, script;
-      script = document.createElement("script");
+      script = document.createElement('script');
       done = false;
       script.src = url;
       script.async = true;
       script.onload = script.onreadystatechange = function() {
-        if (!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+        if (!done && (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete')) {
           done = true;
           script.onload = script.onreadystatechange = null;
           if (script && script.parentNode) {
@@ -211,7 +211,7 @@
         }
       };
       if (!head) {
-        head = document.getElementsByTagName("head")[0];
+        head = document.getElementsByTagName('head')[0];
       }
       return head.appendChild(script);
     };
@@ -220,13 +220,13 @@
     };
     jsonp = function(url, params, callback, callbackName) {
       var key, query, uniqueName;
-      query = ((url || "").indexOf("?") === -1 ? "?" : "&");
-      callbackName = callbackName || config["callbackName"] || "callback";
-      uniqueName = callbackName + "_json" + (++counter);
+      query = ((url || '').indexOf('?') === -1 ? '?' : '&');
+      callbackName = callbackName || config['callbackName'] || 'callback';
+      uniqueName = callbackName + '_json' + (++counter);
       params = params || {};
       for (key in params) {
         if (params.hasOwnProperty(key)) {
-          query += encode(key) + "=" + encode(params[key]) + "&";
+          query += encode(key) + '=' + encode(params[key]) + '&';
         }
       }
       window[uniqueName] = function(data) {
@@ -236,7 +236,7 @@
         } catch (_error) {}
         return window[uniqueName] = null;
       };
-      load(url + query + callbackName + "=" + uniqueName);
+      load(url + query + callbackName + '=' + uniqueName);
       return uniqueName;
     };
     setDefaults = function(obj) {

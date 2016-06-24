@@ -1,0 +1,23 @@
+// bower:scss
+// endbower
+
+$primary-font:		Arial, sans-serif;
+$secondary-font:	"Webdings Regular";
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+h1 { 
+  text-transform: uppercase;
+}
+
+h2 { }
+
+h3 {
+  font-weight: bold;
+}
+
+.webding {
+	font-family: $secondary-font;
+}

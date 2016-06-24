@@ -1,0 +1,101 @@
+// bower:scss
+// endbower
+
+.box { 
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+}
+
+.box__dearlistener {
+	display: flex;
+	flex-direction: column;
+	order: 1;
+	flex-grow: 1;
+	background: rgba(255,0,0,1);
+}
+
+	.box__mixtape { 
+		display: flex;
+		flex-direction: column;
+		order: 2; 
+		flex-grow: 2;
+		background: rgba(0,255,0,1);
+
+		.box__mixtape--header { 
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			order:1;
+			flex-grow:1; 
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		.box__mixtape--postcard {
+			display:flex;
+			flex-grow: 2 ;
+			flex-direction: column;
+			justify-content: center;
+			order:2;
+		}
+
+		.box__mixtape--player {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			order: 3;
+			flex-grow: 1;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		.box__mixtape--playerheader { background: rgba(0,255,0,0.1); }
+		.box__mixtape--playertitle { background: rgba(0,255,0,0.2); }
+		.box__mixtape--playercontrols { background: rgba(0,255,0,0.3); }
+		.box__mixtape--playertrack { background: rgba(0,255,0,0.4); }
+		.box__mixtape--playerstarttime { background: rgba(0,255,0,0.5); }
+		.box__mixtape--playertracktitle { background: rgba(0,255,0,0.6); }
+		.box__mixtape--playerendtime { background: rgba(0,255,0,0.7); }
+		.box__mixtape--playerfooter { background: rgba(0,255,0,0.8); }
+	}
+
+	.box__menu {
+		display: flex;
+		order: 3;
+		flex-direction: column;
+		flex-grow: 1;
+		// background: rgba(0,0,255,0.5);
+
+		.box__menu--artists {
+			display:flex;
+			flex-grow: 1 ;
+			flex-direction: column;
+			justify-content: center;
+			// background: rgba(0,0,255,0.25);
+		}
+
+		.box__menu--exhibition {
+			display:flex;
+			flex-grow: 1 ;
+			flex-direction: column;
+			justify-content: center;
+			// background: rgba(0,0,255,0.45);
+		}
+
+		.box__menu--credits {
+			display:flex;
+			flex-grow: 1 ;
+			flex-direction: column;
+			justify-content: center;
+			// background: rgba(0,0,255,0.65);
+		}
+
+		.box__menu--shuffle {
+			display:flex;
+			flex-grow: 1 ;
+			flex-direction: column;
+			justify-content: center;
+			// background: rgba(0,0,255,0.85);
+		}
+	}
