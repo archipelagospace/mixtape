@@ -7,7 +7,7 @@
 * {
   -webkit-font-smoothing: antialiased;
   font-weight: normal;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.15px;
   margin: 0px;
 }
 
@@ -30,6 +30,29 @@ body {
   padding: 0.2em 0;
 }
 
+#weather {
+  display: inline-block;
+}
 
+.note {
+  min-height: 56px;
+}
 
+.logo-hks {
+  max-width: 80%;
+  min-height: 32px;
+}
 
+.logo-kf {
+  max-width: 80%;
+  min-height: 48px;
+}
+
+.logo-ber {
+  max-width: 80%;
+  min-height: 56px;
+}
+
+.postcard {
+  max-width: 90%;
+}
