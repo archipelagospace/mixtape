@@ -6,7 +6,7 @@ console.log('The Archipelago Mixtape: A Tool for Journeys');
             woeid: '',
             unit: 'c',
             success: function(weather) {
-              var html = '<p>'+'It is '+weather.currently+'</p>';
+              var html = '<p class="header-footer">'+'It is '+weather.currently+'</p>';
 
               $('#weather').html(html);
             },

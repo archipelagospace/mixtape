@@ -1,12 +1,18 @@
 // bower:scss
 // endbower
 
-$primary-font:		Arial, sans-serif;
-$secondary-font:	"Webdings Regular";
+// type scale
+$primary-font:				Arial, sans-serif;
+$primary-title-size:		4vw;
+$secondary-title-size:		2vw;
+$tertiary-title-size:		1.75vw;
+$body-size:					1.125vw;
+$caption-size:				1vw;
 
-h1, h2{
+
+h1, h2 {
 	text-align: center;
-	font-size: 44px;
+	font-size: $primary-title-size;
 }
 
 h1 { 
@@ -14,28 +20,32 @@ h1 {
 	letter-spacing: -0.75px;
 }
 
-h2 { }
-
 h3 {
+	font-size: $tertiary-title-size;
 	text-align: center;
 	font-weight: bold;
 }
 
-.webding {
-	font-family: $secondary-font;
+p {
+	font-size: $body-size;
+	line-height: 1.45vw;
 }
 
 .header-footer {
 	text-align: center;
-	font-size: 14px;
+	font-size: $caption-size;
 }
 
 .start-time {
 	padding-left: 20px;
-	font-size: 24px;
+	font-size: $tertiary-title-size;
 }
 
 .end-time {
 	padding-right: 20px;
-	font-size: 24px;
+	font-size: $tertiary-title-size;
+}
+
+.track-title {
+	font-size: $secondary-title-size;
 }

@@ -18,7 +18,7 @@
 	.box__dearlistener--text {
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
+		justify-content: space-between;
 		height: 75%;
 		order: 1;
 		flex-grow: 3;
@@ -28,7 +28,7 @@
 		padding-bottom: 20px;
 
 		p {
-			font-size: 16px;
+			// font-size: 16px;
 			padding-top: 10px;
 			padding-left: 20px;
 			padding-right: 20px;
@@ -37,19 +37,36 @@
 	}
 
 	.box__dearlistener--logos {
-		height: 25%;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
 		order: 2;
-		flex-grow: 1;
-		padding-top: 30px;
-		padding-bottom: 10%;
+		overflow: hidden;
+		height: 25%;
+		margin: 10px;
 
-		img {
-		  max-height: 56px;
-		}
+			.logo-hks {	
+				height: 90%;
+				position:relative;
+				background:   url("../images/hordaland_ks.svg")no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
+
+			.logo-ber {
+				height: 90%;
+				position:relative;
+				background:   url("../images/bergen_kommune.svg")no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
+
+			.logo-kf {
+				height: 90%;
+				position:relative;
+				background:   url("../images/kulturfondet.svg")no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
 	}
 }
 
@@ -59,7 +76,6 @@
 	flex-direction: column;
 	order: 2; 
 	flex-grow: 2;
-	// background: rgba(0,255,0,1);
 
 	.box__mixtape--header { 
 		display: flex;
@@ -94,27 +110,18 @@
 	}
 
 	.box__mixtape--playerheader {
-		// background: rgba(0,255,0,0.1);
 		order: 1;
-		// flex-grow: 1;
 	}
 
-	// .box__mixtape--playertitle { background: rgba(0,255,0,0.2); }
-	// .box__mixtape--playercontrols { background: rgba(0,255,0,0.3); }
 	.box__mixtape--playertrack {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		// background: rgba(0,255,0,0.4);
 		order: 2;
-		// flex-grow: 1; 
 	}
-	// .box__mixtape--playerstarttime { background: rgba(0,255,0,0.5); }
-	// .box__mixtape--playertracktitle { background: rgba(0,255,0,0.6); }
-	// .box__mixtape--playerendtime { background: rgba(0,255,0,0.7); }
+
 	.box__mixtape--playerfooter { 
-		// background: rgba(0,255,0,0.8);
 		order: 3;
 	}
 }
@@ -125,41 +132,40 @@
 	order: 3;
 	flex-direction: column;
 	flex-grow: 1;
-	// background: rgba(0,0,255,0.5);
 
-	.box__menu--artists {
-		height: 25%;
-		display:flex;
-		flex-grow: 1 ;
-		flex-direction: column;
-		justify-content: center;
-		// background: rgba(0,0,255,0.25);
-	}
+		.box__menu--artists {
+			height: 25%;
+			display:flex;
+			flex-grow: 1 ;
+			flex-direction: column;
+			justify-content: center;
+		}
 
-	.box__menu--exhibition {
-		height: 25%;
-		display:flex;
-		flex-grow: 1 ;
-		flex-direction: column;
-		justify-content: center;
-		// background: rgba(0,0,255,0.45);
-	}
+		.box__menu--exhibition {
+			height: 25%;
+			display:flex;
+			flex-grow: 1 ;
+			flex-direction: column;
+			justify-content: center;
+		}
 
-	.box__menu--credits {
-		height: 25%;
-		display:flex;
-		flex-grow: 1 ;
-		flex-direction: column;
-		justify-content: center;
-		// background: rgba(0,0,255,0.65);
-	}
+		.box__menu--credits {
+			height: 25%;
+			display:flex;
+			flex-grow: 1 ;
+			flex-direction: column;
+			justify-content: center;
+		}
 
-	.box__menu--shuffle {
-		height: 25%;
-		display:flex;
-		flex-grow: 1 ;
-		flex-direction: column;
-		justify-content: center;
-		// background: rgba(0,0,255,0.85);
+		.box__menu--shuffle {
+			height: 25%;
+			display:flex;
+			flex-grow: 1 ;
+			flex-direction: column;
+			justify-content: center;
+
+				.note {
+				  min-height: $primary-title-size;
+				}
 		}
 	}
