@@ -2,7 +2,8 @@
   "name": "mixtape",
   "private": true,
   "dependencies": {
-    "jquery": "^3.0.0"
+    "jquery": "^3.0.0",
+    "howler.js": "howler#^1.1.29"
   },
   "devDependencies": {
     "chai": "^3.5.0",

@@ -15,3 +15,11 @@ console.log('The Archipelago Mixtape: A Tool for Journeys');
             }
           });
         });
+
+var sound = new Howl({
+	urls: ['extras/archipelago-mixtape-1.mp3', 'extras/archipelago-mixtape-1.ogg'],
+	autoplay: true,
+	loop: true,
+	iOSAutoEnable: true,
+	volume: 0.5,
+	});
