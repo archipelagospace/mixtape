@@ -2,6 +2,8 @@
  * Howler.js playlist
  */
 var howlerBank = [];
+var currentlyPlaying = false
+var playing = false
 var playlist = function(e) {
     // initialisation:
     var pCount = 0;
@@ -21,34 +23,60 @@ var playlist = function(e) {
       if (loop === true ) { pCount = (pCount + 1 !== howlerBank.length)? pCount + 1 : 0; }
       else { pCount = pCount + 1; }
       howlerBank[pCount].play();
+      currentlyPlaying = pCount
     };
 
-    // build up howlerBank:     
-    playlistUrls.forEach(function(current, i) {   
+    // build up howlerBank:
+    playlistUrls.forEach(function(current, i) {
       howlerBank.push(new Howl({ urls: [playlistUrls[i]], onend: onEnd, autoplay: false, iOSAutoEnable: false, buffer: true }))
     });
 }
 
-var playing = false
+
 
 $(document).ready(function() {
+
+    // initiate playlist
     playlist();
+
+    $('.box__artist-button').click(function(e) {
+      console.log(e.target.id, currentlyPlaying);
+      if (!playing) {
+        howlerBank[e.target.id].play();
+        playing = true;
+        // add it to the currently playing list
+        currentlyPlaying = e.target.id
+      } else {
+        if (e.target.id !== currentlyPlaying) {
+          howlerBank[currentlyPlaying].stop();
+          howlerBank[e.target.id].play();
+          currentlyPlaying = e.target.id;
+          playing = true;
+        } else {
+          howlerBank[e.target.id].pause();
+          playing = false;
+          // add it to the currently playing list
+          currentlyPlaying = false
+        }
+      }
+    });
+
     $('#playbutton').click(function(){
       if (!playing) {
-        howlerBank[0].play();
+        howlerBank[currentlyPlaying].play();
         playing = true;
       };
     });
     $('#stopbutton').click(function() {
       if (playing) {
-        howlerBank[0].stop();
+          howlerBank[currentlyPlaying].stop();
         playing = false
       };
     });
     $('#pausebutton').click(function() {
       if (playing) {
-        howlerBank[0].pause();
-          playing = false
+        howlerBank[currentlyPlaying].pause();
+        playing = false
       };
     });
 });

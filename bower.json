@@ -4,7 +4,8 @@
   "dependencies": {
     "jquery": "^3.0.0",
     "howler.js": "howler#^1.1.29",
-    "modernizr": "^3.3.1"
+    "modernizr": "^3.3.1",
+    "simpleWeather": "jquery-simpleweather#^3.1.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
