@@ -1,44 +1,6 @@
-
 /*
  * Howler.js playlist
  */
-
-// var playlist = function(e) {
-//     // initialisation:
-// 	var pCount = 0;
-// 	var playlistUrls = [
-// 		"../extras/01_Lunge_KristinAustreid.mp3",
-// 		"../extras/02_Windows_95_Audun_Mortensen.mp3",
-// 		"../extras/03_Untitled_(Tonlei)_Jason-Hendrik_Hansma.mp3",
-// 		"../extras/04_Mygg_Ingrid_Furre.mp3",
-// 		"../extras/05_Covering_of_the_hand_Glove_Femke_de_Vries.mp3",
-// 		"../extras/06_Hanging_Low_Rosalie_Schweiker_and_Jenny_Moore.mp3",
-// 		"../extras/07_5_erotic_stories_Inger_Wold_Lund.mp3"
-//     ]; // audio list
-// 	var howlerBank = [];
-// 	var loop = true;
-
-//     // playing i+1 audio (= chaining audio files)
-//     var onEnd = function(e) {
-//       if (loop === true ) { pCount = (pCount + 1 !== howlerBank.length)? pCount + 1 : 0; }
-//       else { pCount = pCount + 1; }
-//       howlerBank[pCount].play();
-//     };
-
-//     // build up howlerBank:     
-//     playlistUrls.forEach(function(current, i) {   
-//       howlerBank.push(new Howl({ urls: [playlistUrls[i]], onend: onEnd, autoplay: false, iOSAutoEnable: false, buffer: true }))
-//     });
-
-//     // initiate the whole :
-//         howlerBank[0].play();
-// }
-
-// $(document).ready(function() {
-//     $("#playbutton").click(function(){ 
-//         playlist();
-//     });
-//  });
 var howlerBank = [];
 var playlist = function(e) {
     // initialisation:
