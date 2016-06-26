@@ -2,11 +2,42 @@
  * Howler.js playlist
  */
 var howlerBank = [];
-var currentlyPlaying = false
-var playing = false
+var currentlyPlaying = -1;
+var playing = false;
+var offset = 0;
+var trackTimeout;
+
+var trackStartElement = $('#track-start-time p');
+var trackTitleElement = $('#track-title p');
+
+var updateTime = function(){
+  if(!playing)
+    return;
+  var trackPosition = howlerBank[currentlyPlaying].pos() || 0;
+  var sum = offset + trackPosition;
+  var minutes = Math.floor(sum/60);
+  var seconds = Math.round(sum - minutes * 60);
+  seconds = ('0'+seconds).substr(-2);
+  trackStartElement.text(minutes+':'+seconds);
+  return setTimeout(updateTime,1000);
+  
+}
+
+var getTrackInfo = function(el){
+  var track = el.id | 0;
+  offset = 0;
+  console.log(el);
+  trackTitleElement.text(el.textContent);
+
+  for(var i = 0; i < el.id; i++){
+    offset+= howlerBank[i]._duration;
+  };
+  trackTimeout = updateTime();
+
+}
+
 var playlist = function(e) {
     // initialisation:
-    var pCount = 0;
     var playlistUrls = [
         '../extras/01_Lunge_KristinAustreid.mp3',
         '../extras/02_Windows_95_Audun_Mortensen.mp3',
@@ -20,15 +51,23 @@ var playlist = function(e) {
 
     // playing i+1 audio (= chaining audio files)
     var onEnd = function(e) {
-      if (loop === true ) { pCount = (pCount + 1 !== howlerBank.length)? pCount + 1 : 0; }
-      else { pCount = pCount + 1; }
-      howlerBank[pCount].play();
-      currentlyPlaying = pCount
+      currentlyPlaying++;
+      currentlyPlaying = loop ? currentlyPlaying % howlerBank.length : currentlyPlaying;
+      //     if (loop === true ) { currentlyPlaying = (currentlyPlaying + 1 !== howlerBank.length)? currentlyPlaying + 1 : 0; }
+      // else { currentlyPlaying = currentlyPlaying + 1; }
+      clearTimeout(trackTimeout);
+      trackTimeout = null;
+      getTrackInfo($('#'+currentlyPlaying)[0]);
+      howlerBank[currentlyPlaying].play();
     };
+
+    var onEndDelayed = function(){
+      setTimeout(onEnd,100);
+    } ;
 
     // build up howlerBank:
     playlistUrls.forEach(function(current, i) {
-      howlerBank.push(new Howl({ urls: [playlistUrls[i]], loop: false, onend: onEnd, autoplay: false, iOSAutoEnable: false, buffer: true }))
+      howlerBank.push(new Howl({ urls: [playlistUrls[i]], onend: onEndDelayed, autoplay: false, iOSAutoEnable: false, buffer: true }))
     });
 }
 
@@ -40,34 +79,45 @@ $(document).ready(function() {
     playlist();
 
     $('.exhibition__piece-button').click(function(e) {
-      console.log(e.target.id, currentlyPlaying);
-      if (currentlyPlaying) {
+
+      clearTimeout(trackTimeout);
+      trackTimeout = null;
+      if (playing) {
         howlerBank[currentlyPlaying].stop();
-        playing = false
-      }
-      if (!playing) {
-        howlerBank[e.target.id].play();
-        playing = true;
-        currentlyPlaying = e.target.id
-      }
+        playing = false;
+      }       
+      howlerBank[e.target.id].play();
+      playing = true;
+      currentlyPlaying = e.target.id;
+      getTrackInfo(e.target)
     });
 
     $('#playbutton').click(function(){
+      if(currentlyPlaying == -1){
+        currentlyPlaying = 0;
+        getTrackInfo($('#0')[0]);
+      }
       if (!playing) {
         howlerBank[currentlyPlaying].play();
-        playing = true
+
+        playing = true;
+        updateTime();
       };
     });
     $('#stopbutton').click(function() {
       if (playing) {
         howlerBank[currentlyPlaying].stop();
-        playing = false
+        playing = false;
+        clearTimeout(trackTimeout);
+        trackTimeout = null;
       };
     });
     $('#pausebutton').click(function() {
       if (playing) {
         howlerBank[currentlyPlaying].pause();
-        playing = false
+        playing = false;
+        clearTimeout(trackTimeout);
+        trackTimeout = null;
       };
     });
 });
