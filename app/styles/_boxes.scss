@@ -178,13 +178,19 @@
 		.control {
 			cursor: pointer;
 			padding-right: 1.15vw;
-			height: 1.75vw;
+			height: 2vw;
 		}
 
 		.control:hover path {
 			fill: $secondary-color;
 			cursor: pointer;
 		}
+
+		.control:focus path {
+			fill: $secondary-color;
+			cursor: pointer;
+		}
+
 	}
 
 	.box__mixtape--playerfooter { 
@@ -199,7 +205,7 @@
 	flex-direction: column;
 	flex-grow: 1;
 
-		:hover {
+		:hover, :focus {
 			cursor: pointer;
 			color: $secondary-color;
 		}
@@ -234,7 +240,7 @@
 			flex-grow: 1 ;
 			flex-direction: column;
 			justify-content: center;
-			cursor: alias;
+			// cursor: alias;
 
 				.note {
 				  height: $primary-title-size*1.5;
@@ -242,6 +248,12 @@
 
 				.note:hover path {
 					fill: $secondary-color;
+					// cursor: alias;
+				}
+
+				.note:focus path {
+					fill: $secondary-color;
+					// cursor: alias;
 				}
 		}
 	}
