@@ -28,7 +28,7 @@ var playlist = function(e) {
 
     // build up howlerBank:
     playlistUrls.forEach(function(current, i) {
-      howlerBank.push(new Howl({ urls: [playlistUrls[i]], onend: onEnd, autoplay: false, iOSAutoEnable: false, buffer: true }))
+      howlerBank.push(new Howl({ urls: [playlistUrls[i]], loop: false, onend: onEnd, autoplay: false, iOSAutoEnable: false, buffer: true }))
     });
 }
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
     // initiate playlist
     playlist();
 
-    $('.box__artist-button').click(function(e) {
+    $('.exhibition__piece-button').click(function(e) {
       console.log(e.target.id, currentlyPlaying);
       if (currentlyPlaying) {
         howlerBank[currentlyPlaying].stop();
