@@ -7,14 +7,14 @@ console.log('The Archipelago Mixtape: A Tool for Journeys');
  * Menu items
 */
 $(function() {
-    $( "#artists-title" ).click(function() {
-        $( "#artists" ).slideToggle();
+    $( '#artists-title' ).click(function() {
+        $( '#artists' ).slideToggle();
     });
 });
 
 $(function() {
-    $( "#exhibition-title" ).click(function() {
-        $( "#exhibition" ).slideToggle();
+    $( '#exhibition-title' ).click(function() {
+        $( '#exhibition' ).slideToggle();
     });
 });
 
