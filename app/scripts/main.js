@@ -4,6 +4,21 @@
 console.log('The Archipelago Mixtape: A Tool for Journeys');
 
 /*
+ * Menu items
+*/
+$(function() {
+    $( "#artists-title" ).click(function() {
+        $( "#artists" ).slideToggle();
+    });
+});
+
+$(function() {
+    $( "#exhibition-title" ).click(function() {
+        $( "#exhibition" ).slideToggle();
+    });
+});
+
+/*
  * Weather magic w Simpleweather.js
  */
     $(document).ready(function() {
