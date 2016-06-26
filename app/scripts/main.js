@@ -25,14 +25,14 @@ console.log('The Archipelago Mixtape: A Tool for Journeys');
 /*
  * Howler.js audio controlling
  */
-var sound = new Howl({
-	urls: ['extras/archipelago-mixtape-1.mp3', 'extras/archipelago-mixtape-1.ogg'],
-	autoplay: false,
-	buffer: true,
-	loop: true,
-	iOSAutoEnable: false,
-	volume: 1,
-	});
+// var sound = new Howl({
+// 	urls: ['extras/archipelago-mixtape-1.mp3', 'extras/archipelago-mixtape-1.ogg'],
+// 	autoplay: false,
+// 	buffer: true,
+// 	loop: true,
+// 	iOSAutoEnable: false,
+// 	volume: 1,
+// 	});
 
 /*
 * Replace all SVG images with inline SVG
