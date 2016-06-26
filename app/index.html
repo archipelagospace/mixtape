@@ -54,10 +54,13 @@
     
     <div id="player" class="box__mixtape--player">
       <div id="player-header" class="box__mixtape--playerheader">
-        <div id="player-title">
+        <div id="player-title" class="box__mixtape--playertitle">
           <h1>Mixtape</h1>
         </div>
-        <div id="player-controls"></div>      
+        <div id="player-controls" class="box__mixtape--playercontrols">
+          <div id="pausebutton" onclick="sound.pause()"><img src="images/pause.svg" class='svg control'></div>
+          <div id="playbutton" onclick="sound.play()"><img src="images/play.svg" class='svg control'></div>
+        </div>      
       </div>
       <div id="player-track" class="box__mixtape--playertrack">
         <div id="track-start-time" class="start-time">
@@ -85,7 +88,7 @@
       <h2>Credits</h2>
     </div>
     <div id="menu-shuffle" class="box__menu--shuffle">
-      <img src="images/note.svg" class="note"></img>
+      <img src="images/note.svg" class="svg note"></img>
     </div>
   </div>
 </div>
