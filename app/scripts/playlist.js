@@ -35,19 +35,19 @@ $(document).ready(function() {
     playlist();
     $("#playbutton").click(function(){
       if (!playing) {
-        howlerBank[].play();
+        howlerBank[0].play();
         playing = true;
       };
     });
     $("#stopbutton").click(function() {
       if (playing) {
-        howlerBank[].stop();
+        howlerBank[0].stop();
         playing = false
       };
     });
     $("#pausebutton").click(function() {
       if (playing) {
-        howlerBank[].pause();
+        howlerBank[0].pause();
           playing = false
       };
     });
