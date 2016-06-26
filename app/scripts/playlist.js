@@ -41,23 +41,14 @@ $(document).ready(function() {
 
     $('.box__artist-button').click(function(e) {
       console.log(e.target.id, currentlyPlaying);
+      if (currentlyPlaying) {
+        howlerBank[currentlyPlaying].stop();
+        playing = false
+      }
       if (!playing) {
         howlerBank[e.target.id].play();
         playing = true;
-        // add it to the currently playing list
         currentlyPlaying = e.target.id
-      } else {
-        if (e.target.id !== currentlyPlaying) {
-          howlerBank[currentlyPlaying].stop();
-          howlerBank[e.target.id].play();
-          currentlyPlaying = e.target.id;
-          playing = true;
-        } else {
-          howlerBank[e.target.id].pause();
-          playing = false;
-          // add it to the currently playing list
-          currentlyPlaying = false
-        }
       }
     });
 
