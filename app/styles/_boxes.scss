@@ -8,8 +8,8 @@
 }
 
 .box__dearlistener {
-	padding: 10px;
 	width: 25%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	order: 1;
@@ -42,12 +42,12 @@
 		order: 2;
 		overflow: hidden;
 		height: 25%;
-		margin: 10px;
+		margin: 30px;
 
 			.logo-hks {	
 				height: 90%;
 				position:relative;
-				background:   url("../images/hordaland_ks.svg")no-repeat;
+				background: url("../images/hordaland_ks.svg")no-repeat;
 				background-size: contain;
 				background-position: center;
 			}
@@ -55,7 +55,9 @@
 			.logo-ber {
 				height: 90%;
 				position:relative;
-				background:   url("../images/bergen_kommune.svg")no-repeat;
+				background: url("../images/bergen_kommune.png")no-repeat;
+				background: url("../images/bergen_kommune.svg")no-repeat,
+				    linear-gradient(transparent, transparent);
 				background-size: contain;
 				background-position: center;
 			}
@@ -63,7 +65,7 @@
 			.logo-kf {
 				height: 90%;
 				position:relative;
-				background:   url("../images/kulturfondet.svg")no-repeat;
+				background: url("../images/kulturfondet.svg")no-repeat;
 				background-size: contain;
 				background-position: center;
 			}
@@ -118,7 +120,40 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		overflow: hidden;
 		order: 2;
+
+		.track-title {
+			width: 400px;
+			font-size: $body-size;
+			text-align: center;
+			margin: 0 auto;
+			white-space: nowrap;
+			box-sizing: border-box;
+			overflow: hidden;
+			animation: marquee 30s linear infinite;
+			z-index: 0;
+		}
+		.start-time {
+			padding-left: 20px;
+			padding-right: 5px;
+			font-size: $tertiary-title-size;
+			background-color: rgba(35, 223, 255, 1.00);
+			z-index:4;
+			}
+
+		.end-time {
+			padding-right: 20px;
+			padding-left: 5px;
+			font-size: $tertiary-title-size;
+			background-color: rgba(35, 223, 255, 1.00);
+			z-index:4;
+			}
+
+		@keyframes marquee {
+			0% { transform: translateX(100%); }
+			100% { transform: translateX(-100%); }
+		}
 	}
 
 	.box__mixtape--playerfooter { 

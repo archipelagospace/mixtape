@@ -18,8 +18,8 @@ console.log('The Archipelago Mixtape: A Tool for Journeys');
 
 var sound = new Howl({
 	urls: ['extras/archipelago-mixtape-1.mp3', 'extras/archipelago-mixtape-1.ogg'],
-	autoplay: true,
+	autoplay: false,
 	loop: true,
-	iOSAutoEnable: true,
+	iOSAutoEnable: false,
 	volume: 0.5,
 	});
