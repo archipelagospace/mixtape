@@ -1,26 +1,25 @@
 /*
  * Lil' message for the peekers
  */
-
 console.log('The Archipelago Mixtape: A Tool for Journeys');
 
 /*
  * Weather magic w Simpleweather.js
  */
     $(document).ready(function() {
-    $.simpleWeather({
-        location: 'Bergen, NO',
-        woeid: '',
-        unit: 'c',
-        success: function(weather) {
-          var html = '<p class="header-footer">'+'It is '+weather.currently+'</p>';
+	    $.simpleWeather({
+	        location: 'Bergen, NO',
+	        woeid: '',
+	        unit: 'c',
+	        success: function(weather) {
+	          var html = '<p class="header-footer">'+'It is '+weather.currently+'</p>';
 
-          $('#weather').html(html);
-        },
-        error: function(error) {
-          $('#weather').html('<p>' + error + '</p>');
-        }
-      });
+	          $('#weather').html(html);
+	        },
+	        error: function(error) {
+	          $('#weather').html('<p>' + error + '</p>');
+	        }
+	      });
     });
 
 /*
@@ -35,23 +34,17 @@ var sound = new Howl({
 	volume: 1,
 	});
 
-// function checkForFocus() {
-//     if (document.hasFocus() == lastFocusStatus) {
-//         return;
-//     }
-//     if (document.hasFocus()) {
-//         //Unpause and unmute when focus has been gained
-//         sound.unmute();
-//     } else {
-//         //Pause and mute when focus had been lost
-//         sound.mute();
-//     }
-//     lastFocusStatus = !lastFocusStatus;
-// }
+/*
+ * Click drama
+ */
+('#playbutton').on('click touchend', function(e) {
+    sound.play();
+	('#playbutton').addClass('hover');
+});
 
-// window.lastFocusStatus = document.hasFocus();
-// checkForFocus();
-// setInterval(checkForFocus, 200);
+('#pausebutton').on('click touchend', function(e) {
+    sound.pause();
+});
 
 /*
 * Replace all SVG images with inline SVG
