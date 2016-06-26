@@ -35,18 +35,6 @@ var sound = new Howl({
 	});
 
 /*
- * Click drama
- */
-('#playbutton').on('click touchend', function(e) {
-    sound.play();
-	('#playbutton').addClass('hover');
-});
-
-('#pausebutton').on('click touchend', function(e) {
-    sound.pause();
-});
-
-/*
 * Replace all SVG images with inline SVG
 */
 jQuery('img.svg').each(function(){

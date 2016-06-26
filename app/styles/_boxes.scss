@@ -122,8 +122,8 @@
 
 	.box__mixtape--playertitle {
 		order: 1;
-		width: 90%;
-		padding-left: 10%;
+		width: 100%;
+		padding-left: 15%;
 	}
 
 	.box__mixtape--playertrack {
@@ -173,12 +173,12 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: flex-end;
-		width: 10%;
+		width: 25%;
 		
 		.control {
 			cursor: pointer;
-			padding-right: 1.15vw;
-			height: 2.5vw;
+			padding-right: 2vw;
+			height: 3vw;
 		}
 
 		.control:hover path {
