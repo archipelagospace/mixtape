@@ -55,12 +55,12 @@ $(document).ready(function() {
     $('#playbutton').click(function(){
       if (!playing) {
         howlerBank[currentlyPlaying].play();
-        playing = true;
+        playing = true
       };
     });
     $('#stopbutton').click(function() {
       if (playing) {
-          howlerBank[currentlyPlaying].stop();
+        howlerBank[currentlyPlaying].stop();
         playing = false
       };
     });

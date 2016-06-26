@@ -210,6 +210,10 @@
 			color: $secondary-color;
 		}
 
+		li {
+			list-style-type: lower-roman;
+		}
+
 		.box__menu--artists {
 			height: 25%;
 			display:flex;
@@ -232,6 +236,11 @@
 			flex-grow: 1 ;
 			flex-direction: column;
 			justify-content: center;
+
+			p {
+				text-align: center;
+				padding: 5%;
+			}
 		}
 
 		.box__menu--shuffle {

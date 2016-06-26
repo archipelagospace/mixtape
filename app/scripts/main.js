@@ -1,4 +1,20 @@
 /*
+ * Gauges tracking code
+ */
+var _gauges = _gauges || [];
+    (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '576cacf7bb922a7e7200ad28');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+})();
+
+/*
  * Lil' message for the peekers
  */
 console.log('The Archipelago Mixtape: A Tool for Journeys');
@@ -15,6 +31,12 @@ $(function() {
 $(function() {
     $( '#exhibition-title' ).click(function() {
         $( '#exhibition' ).slideToggle();
+    });
+});
+
+$(function() {
+    $( '#credits-title' ).click(function() {
+        $( '#credits' ).slideToggle();
     });
 });
 
@@ -36,18 +58,6 @@ $(function() {
 	        }
 	      });
     });
-
-/*
- * Howler.js audio controlling
- */
-// var sound = new Howl({
-// 	urls: ['extras/archipelago-mixtape-1.mp3', 'extras/archipelago-mixtape-1.ogg'],
-// 	autoplay: false,
-// 	buffer: true,
-// 	loop: true,
-// 	iOSAutoEnable: false,
-// 	volume: 1,
-// 	});
 
 /*
 * Replace all SVG images with inline SVG
