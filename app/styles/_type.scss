@@ -17,6 +17,11 @@ $tertiary-color:			rgba(35, 223, 255, 1.00);
 h1, h2 {
 	text-align: center;
 	font-size: $primary-title-size;
+
+	@include breakpoint(mobileonly){ 
+	font-size: $primary-title-size*1.5;
+	padding:5%;	}
+
 }
 
 h1 { 
@@ -28,16 +33,31 @@ h3 {
 	font-size: $tertiary-title-size;
 	text-align: center;
 	font-weight: bold;
+
+	@include breakpoint(mobileonly){ 
+	font-size: $tertiary-title-size*3;
+	padding-bottom: 1.45vw*3;
+	}
+
 }
 
 p {
 	font-size: $body-size;
 	line-height: 1.45vw;
+
+	@include breakpoint(mobileonly){ 
+		font-size: $body-size*3;
+		line-height: 1.45vw*3;
+	}
 }
 
 .header-footer {
 	text-align: center;
 	font-size: $caption-size;
+
+	@include breakpoint(mobileonly){ 
+	font-size: $caption-size*2;
+	padding-bottom: 1%;	}	
 }
 
 // .exhibition__piece-button {

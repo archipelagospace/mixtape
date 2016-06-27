@@ -5,6 +5,10 @@
 	display: flex;
 	flex-direction: row;
 	height: 100vh;
+
+	// @include breakpoint(phablet){ flex-direction:column; }
+	// @include breakpoint(tablet){ flex-direction:column; }
+	@include breakpoint(mobileonly){ flex-direction:column; }
 }
 
 .box__dearlistener {
@@ -14,6 +18,11 @@
 	flex-direction: column;
 	order: 1;
 	flex-grow: 1;
+
+	@include breakpoint(mobileonly){ 
+		height: 25%;
+		width: 100%;
+		order: 2; }
 
 	.box__dearlistener--text {
 		display: flex;
@@ -26,6 +35,14 @@
 		overflow-y:scroll;
 		padding-top: 20%;
 		padding-bottom: 20%;
+
+		@include breakpoint(mobileonly){ 
+			height: 10%;
+			justify-content: flex-start;
+			padding: 5%;
+			padding-left: 1%;
+			padding-right: 1%;
+			}
 
 		p {
 			// font-size: 16px;
@@ -44,12 +61,29 @@
 		height: 25%;
 		margin: 30px;
 
+		@include breakpoint(mobileonly){ 
+			flex-direction: row;
+			justify-content: space-around;
+			padding: 10px;
+			margin: 0;
+		}
+
+		.logo-ber, .logo-kf {
+			@include breakpoint(mobileonly){ 
+					height: auto;
+					width: 40%;
+				}
+		}	
+
 			.logo-hks {	
 				height: 90%;
 				position:relative;
 				background: url("../images/hordaland_ks.svg")no-repeat;
 				background-size: contain;
 				background-position: center;
+
+			@include breakpoint(mobileonly){ 
+					width: 60%;	}
 			}
 
 			.logo-ber {
@@ -79,6 +113,11 @@
 	order: 2; 
 	flex-grow: 2;
 
+	@include breakpoint(mobileonly){ 
+		height: 50%;
+		width: 100%;
+		order: 1; }
+
 	.box__mixtape--header { 
 		display: flex;
 		flex-direction: column;
@@ -88,6 +127,19 @@
 		padding-top: 10px;
 		padding-bottom: 10px;
 		height: 20%;
+
+		@include breakpoint(mobileonly){ 
+			height: 10%;
+			justify-content: space-between;;
+			}
+
+		h1 {
+		@include breakpoint(mobileonly){ 
+			z-index: 10;
+			padding: 0;
+		}			
+		}
+
 	}
 
 	.box__mixtape--postcard {
@@ -98,6 +150,10 @@
 		align-items: center;
 		order:2;
 		height: 60%;
+
+		@include breakpoint(mobileonly){ 
+			height: 85%;
+			}
 	}
 
 	.box__mixtape--player {
@@ -109,6 +165,11 @@
 		padding-top: 10px;
 		padding-bottom: 10px;
 		height: 20%;
+
+		@include breakpoint(mobileonly){ 
+			padding-top: 0px;
+			padding-bottom: 0px;
+			}		
 	}
 
 	.box__mixtape--playerheader {
@@ -118,12 +179,24 @@
 		justify-content: space-around;
 		order: 1;
 
+		@include breakpoint(mobileonly){ 
+			justify-content: space-between;
+		}
 	}
 
 	.box__mixtape--playertitle {
 		order: 1;
 		width: 100%;
 		padding-left: 15%;
+
+		h1 {
+		@include breakpoint(mobileonly){ 
+			z-index: 10;
+			padding: 0;
+			padding-left: 5%;
+			}
+		}			
+
 	}
 
 	.box__mixtape--playertrack {
@@ -132,7 +205,7 @@
 		justify-content: space-between;
 		align-items: center;
 		overflow: hidden;
-		order: 2;
+		order: 2;	
 
 		.track-title {
 			width: 400px;
@@ -145,6 +218,7 @@
 			animation: marquee 30s linear infinite;
 			z-index: 0;
 		}
+
 		.start-time {
 			padding-left: 20px;
 			padding-right: 5px;
@@ -179,6 +253,12 @@
 			cursor: pointer;
 			padding-right: 2vw;
 			height: 2.15vw;
+
+		@include breakpoint(mobileonly){ 
+			height: 2.15vw*3;
+			padding-right: 2vw*3;
+		}
+
 		}
 
 		.control:hover path {
@@ -204,6 +284,10 @@
 	order: 3;
 	flex-direction: column;
 	flex-grow: 1;
+
+		@include breakpoint(mobileonly){ 
+			display: none;
+		}
 
 		h2:hover, :focus {
 			cursor: pointer;
