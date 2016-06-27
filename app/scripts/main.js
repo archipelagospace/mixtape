@@ -89,3 +89,7 @@ jQuery('img.svg').each(function(){
 
     }, 'xml');
 });
+
+/*
+* Google search magic
+*/
