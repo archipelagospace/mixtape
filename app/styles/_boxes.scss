@@ -1,7 +1,7 @@
 // bower:scss
 // endbower
 
-.box { 
+.box {
 	display: flex;
 	flex-direction: row;
 	height: 100vh;
@@ -10,6 +10,70 @@
 	// @include breakpoint(tablet){ flex-direction:column; }
 	@include breakpoint(mobileonly){ flex-direction:column; }
 }
+
+	.box__landscapes--a {
+    z-index: 10;
+    width: 46.2px;
+    height: 49.6px;
+    position: fixed;
+    background: url(../images/landscape-1.svg) no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+	}
+
+	.box__landscapes--b {
+    z-index: 10;
+    width: 50px;
+    height: 46.2px;
+    position: fixed;
+    background: url(../images/landscape-2.svg) no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+	}
+
+	.box__landscapes--c {
+    z-index: 10;
+    width: 49.6px;
+    height: 40.4px;
+    position: fixed;
+    background: url(../images/landscape-3.svg) no-repeat;
+    background-size: cover;
+    // transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    left: -1px;
+
+  	@include breakpoint(mobileonly){ 
+			display: none;
+		}
+	}
+
+	.box__landscapes--d {
+    z-index: 10;
+    width: 49.6px;
+    height: 43.2px;
+    position: fixed;
+    background: url(../images/landscape-4.svg) no-repeat;
+    background-size: cover;
+    // transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    right: -1px;
+
+  	@include breakpoint(mobileonly){ 
+			display: none;
+		}
+	}
 
 .box__dearlistener {
 	width: 25%;
@@ -73,7 +137,7 @@
 					height: auto;
 					width: 40%;
 				}
-		}	
+		}
 
 			.logo-hks {	
 				height: 90%;
@@ -82,7 +146,7 @@
 				background-size: contain;
 				background-position: center;
 
-			@include breakpoint(mobileonly){ 
+			@include breakpoint(mobileonly){
 					width: 60%;	}
 			}
 
@@ -106,19 +170,19 @@
 	}
 }
 
-.box__mixtape { 
+.box__mixtape {
 	display: flex;
 	width: 50%;
 	flex-direction: column;
 	order: 2; 
 	flex-grow: 2;
 
-	@include breakpoint(mobileonly){ 
+	@include breakpoint(mobileonly){
 		height: 50%;
 		width: 100%;
 		order: 1; }
 
-	.box__mixtape--header { 
+	.box__mixtape--header {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -137,9 +201,8 @@
 		@include breakpoint(mobileonly){ 
 			z-index: 10;
 			padding: 0;
-		}			
 		}
-
+		}
 	}
 
 	.box__mixtape--postcard {
@@ -196,7 +259,6 @@
 			padding-left: 5%;
 			}
 		}			
-
 	}
 
 	.box__mixtape--playertrack {
@@ -279,7 +341,6 @@
 			fill: $secondary-color;
 			cursor: pointer;
 		}
-
 	}
 
 	.box__mixtape--playerfooter { 
