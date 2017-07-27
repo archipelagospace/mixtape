@@ -94,7 +94,7 @@ jQuery('img.svg').each(function(){
 * Rando :)
 */
 //Add your images, we'll set the path in the next step
-    var images = ['bergen_postcard-1.jpg', 'bergen_postcard-2.jpg', 'bergen_postcard-3.jpg', 'bergen_postcard-4.jpg', 'bergen_postcard-5.jpg', 'bergen_postcard-6.jpg'];
-    
+    var images = ['bergen_postcard-1.jpg', 'bergen_postcard-2.jpg', 'bergen_postcard-3.jpg', 'bergen_postcard-4.jpg', 'bergen_postcard-5.jpg', 'bergen_postcard-6.jpg', 'bergen_postcard-7.jpg', 'bergen_postcard-8.jpg', 'bergen_postcard-9.jpg', 'bergen_postcard-10.jpg', 'bergen_postcard-11.jpg', 'bergen_postcard-12.jpg', 'bergen_postcard-13.jpg', 'bergen_postcard-14.jpg', 'bergen_postcard-15.jpg'];
+
 //Build the img, then do a bit of maths to randomize load and append to a div.
     $('<img class="postcard" src="images/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#postcardbox');

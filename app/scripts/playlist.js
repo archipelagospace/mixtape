@@ -39,13 +39,12 @@ var getTrackInfo = function(el){
 var playlist = function(e) {
     // initialisation:
     var playlistUrls = [
-        '../extras/01_Lunge_KristinAustreid.mp3',
-        '../extras/02_Windows_95_Audun_Mortensen.mp3',
-        '../extras/03_Untitled_(Tonlei)_Jason-Hendrik_Hansma.mp3',
-        '../extras/04_Mygg_Ingrid_Furre.mp3',
-        '../extras/05_Covering_of_the_hand_Glove_Femke_de_Vries.mp3',
-        '../extras/06_Hanging_Low_Rosalie_Schweiker_and_Jenny_Moore.mp3',
-        '../extras/07_5_erotic_stories_Inger_Wold_Lund.mp3'
+        '../extras/01_--_joshminkus.mp3',
+        '../extras/02_garage_band_musica_mercedesazpilicueta.mp3',
+        '../extras/03_mixtape_jaytan.mp3',
+        '../extras/04_89sacraments_miriam.mp3',
+        '../extras/05_threshold_icaro_zorbar.mp3',
+        '../extras/06_mainshum_oysteinwyller.mp3'
     ]; // audio list
     var loop = true;
 

@@ -18,11 +18,20 @@
 *::selection{ color: $secondary-color; }
 *::-moz-selection{ color: $secondary-color; }
 
+@keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
+@-moz-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
+@-webkit-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
+@-o-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
+
 body {
-  background: $tertiary-color;
+  background: $new-bg;
   font-family: $primary-font;
   color: $primary-color;
   height: 100vh;
+  animation: sunset 10s;
+  -moz-animation: sunset 10s; /* Firefox */
+  -webkit-animation: sunset 10s; /* Safari and Chrome */
+  -o-animation: sunset 10s; /* Opera */
 }
 
 .browserupgrade {
