@@ -140,7 +140,7 @@
 		}
 
 			.logo-hks {	
-				height: 90%;
+				height: 60px;
 				position:relative;
 				background: url("../images/hordaland_ks.svg")no-repeat;
 				background-size: contain;
@@ -151,7 +151,7 @@
 			}
 
 			.logo-ber {
-				height: 90%;
+				height: 60px;
 				position:relative;
 				background: url("../images/bergen_kommune.png")no-repeat;
 				background: url("../images/bergen_kommune.svg")no-repeat,
@@ -161,7 +161,7 @@
 			}
 
 			.logo-kf {
-				height: 90%;
+				height: 60px;
 				position:relative;
 				background: url("../images/kulturfondet.svg")no-repeat;
 				background-size: contain;
@@ -285,24 +285,24 @@
 			padding-left: 20px;
 			padding-right: 5px;
 			font-size: $tertiary-title-size;
-			background-color: $new-bg;
+			background-color: $tertiary-color;
 			z-index:4;
-		  animation: sunset 10s;
-		  -moz-animation: sunset 10s; /* Firefox */
-		  -webkit-animation: sunset 10s; /* Safari and Chrome */
-		  -o-animation: sunset 10s; /* Opera */
+		  animation: sunset 1800s;
+		  -moz-animation: sunset 1800s; /* Firefox */
+		  -webkit-animation: sunset 1800s; /* Safari and Chrome */
+		  -o-animation: sunset 1800s; /* Opera */
 			}
 
 		.end-time {
 			padding-right: 20px;
 			padding-left: 5px;
 			font-size: $tertiary-title-size;
-			background-color: $new-bg;
+			background-color: $tertiary-color;
 			z-index:4;
-		  animation: sunset 10s;
-		  -moz-animation: sunset 10s; /* Firefox */
-		  -webkit-animation: sunset 10s; /* Safari and Chrome */
-		  -o-animation: sunset 10s; /* Opera */
+		  animation: sunset 1800s;
+		  -moz-animation: sunset 1800s; /* Firefox */
+		  -webkit-animation: sunset 1800s; /* Safari and Chrome */
+		  -o-animation: sunset 1800s; /* Opera */
 
 			}
 

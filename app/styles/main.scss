@@ -18,20 +18,63 @@
 *::selection{ color: $secondary-color; }
 *::-moz-selection{ color: $secondary-color; }
 
-@keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
-@-moz-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
-@-webkit-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
-@-o-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
+@keyframes sunset { 
+    0%,100%   {background: $tertiary-color;}
+    15%  {background: rgba(255,0,8,1.00);}
+    30%  {background: rgba(254,134,0,1.00);}
+    45%  {background: rgba(255,255,1,1.00);}
+    60% {background: rgba(55,255,0,1.00);}
+    75% {background: rgba(2,255,255,1.00);}
+    90% {background: rgba(0,9,255,1.00);}
+    95% {background: rgba(252,2,241,1.00);}
+  }
+
+@-moz-keyframes sunset { 
+    0%,100%   {background: $tertiary-color;}
+    15%  {background: rgba(255,0,8,1.00);}
+    30%  {background: rgba(254,134,0,1.00);}
+    45%  {background: rgba(255,255,1,1.00);}
+    60% {background: rgba(55,255,0,1.00);}
+    75% {background: rgba(2,255,255,1.00);}
+    90% {background: rgba(0,9,255,1.00);}
+    95% {background: rgba(252,2,241,1.00);}
+  }
+
+@-webkit-keyframes sunset { 
+    0%,100%   {background: $tertiary-color;}
+    15%  {background: rgba(255,0,8,1.00);}
+    30%  {background: rgba(254,134,0,1.00);}
+    45%  {background: rgba(255,255,1,1.00);}
+    60% {background: rgba(55,255,0,1.00);}
+    75% {background: rgba(2,255,255,1.00);}
+    90% {background: rgba(0,9,255,1.00);}
+    95% {background: rgba(252,2,241,1.00);}
+  }
+
+@-o-keyframes sunset { 
+    0%,100%   {background: $tertiary-color;}
+    15%  {background: rgba(255,0,8,1.00);}
+    30%  {background: rgba(254,134,0,1.00);}
+    45%  {background: rgba(255,255,1,1.00);}
+    60% {background: rgba(55,255,0,1.00);}
+    75% {background: rgba(2,255,255,1.00);}
+    90% {background: rgba(0,9,255,1.00);}
+    95% {background: rgba(252,2,241,1.00);}
+  }
+
+// @-moz-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
+// @-webkit-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
+// @-o-keyframes sunset { from {background:$tertiary-color;} to {background:$new-bg;}}
 
 body {
-  background: $new-bg;
+  background: $tertiary-color;
   font-family: $primary-font;
   color: $primary-color;
   height: 100vh;
-  animation: sunset 10s;
-  -moz-animation: sunset 10s; /* Firefox */
-  -webkit-animation: sunset 10s; /* Safari and Chrome */
-  -o-animation: sunset 10s; /* Opera */
+  animation: sunset 1800s;
+  -moz-animation: sunset 1800s; /* Firefox */
+  -webkit-animation: sunset 1800s; /* Safari and Chrome */
+  -o-animation: sunset 1800s; /* Opera */
 }
 
 .browserupgrade {

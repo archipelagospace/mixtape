@@ -16,6 +16,7 @@ $tertiary-color:			rgba(35, 223, 255, 1.00);
 $new-bg:							rgba(131, 251, 49, 1.00);
 
 h1, h2 {
+	z-index: 20;
 	text-align: center;
 	font-size: $primary-title-size;
 
