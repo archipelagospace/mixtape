@@ -39,12 +39,12 @@ var getTrackInfo = function(el){
 var playlist = function(e) {
     // initialisation:
     var playlistUrls = [
-        '../extras/01_--_joshminkus.mp3',
-        '../extras/02_garage_band_musica_mercedesazpilicueta.mp3',
-        '../extras/03_mixtape_jaytan.mp3',
-        '../extras/04_89sacraments_miriam.mp3',
-        '../extras/05_threshold_icaro_zorbar.mp3',
-        '../extras/06_mainshum_oysteinwyller.mp3'
+        '../extras/00_Reinaart_Vanhoe_archipelago.mp3',
+        '../extras/01_Laura_Pappa_archipelago.mp3',
+        '../extras/02_Sean_Edwards_archipelago.mp3',
+        '../extras/03_Azar_Alsharif_archipelago.mp3',
+        '../extras/04_Morten_Langeland_archipelago.mp3',
+        '../extras/05_Pia_Eikaas_archipelago.mp3'
     ]; // audio list
     var loop = true;
 

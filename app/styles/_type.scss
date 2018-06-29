@@ -19,6 +19,7 @@ h1, h2 {
 	z-index: 20;
 	text-align: center;
 	font-size: $primary-title-size;
+	font-weight: normal;
 
 	@include breakpoint(mobileonly){ 
 	font-size: $primary-title-size*1.5;
